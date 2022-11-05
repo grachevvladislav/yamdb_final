@@ -2,4 +2,4 @@
 yamdb_final
 
 
-![yamdb](https://github.com/grachevvladislav/yamdb_final/actions/workflows/.github/workflows/yamdb_workflow.yml/badge.svg?branch=feature-1)
+![yamdb](https://github.com/grachevvladislav/yamdb_final/actions/workflows/.github/workflows/yamdb_workflow.yml/badge.svg?branch=main)
