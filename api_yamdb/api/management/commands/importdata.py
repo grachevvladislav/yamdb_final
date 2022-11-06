@@ -1,6 +1,7 @@
-from django.core.management.base import BaseCommand
 import csv
 import sqlite3
+
+from django.core.management.base import BaseCommand
 
 
 class Command(BaseCommand):
@@ -40,7 +41,7 @@ class Command(BaseCommand):
                 'instane_field': ['title', 'author']
             },
         }
-        SQL_FORM = (
+        sql_form = (
             """INSERT INTO main.reviews_{}
             ({}) VALUES
             ('{}');"""
@@ -66,7 +67,7 @@ class Command(BaseCommand):
                         clean.update(add_field)
                     try:
                         cursor.execute(
-                            SQL_FORM.format(
+                            sql_form.format(
                                 db['db_name'],
                                 ', '.join(clean.keys()),
                                 "', '".join(clean.values())

@@ -1,10 +1,10 @@
+from django.conf import settings
 from django.core.validators import MaxValueValidator, MinValueValidator
 from django.shortcuts import get_object_or_404
 from rest_framework import serializers
-
-from django.conf import settings
-from .mixins import UsernameMixins
 from reviews.models import Category, Comment, Genre, Review, Title, User
+
+from .mixins import UsernameMixins
 
 MORE_THAN_ONE_REVIEW = (
     'Превышено допустимое количество отзывов. '

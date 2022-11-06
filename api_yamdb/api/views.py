@@ -1,33 +1,29 @@
 import random
 
-from django.db.utils import IntegrityError
-from django.db.models.aggregates import Avg
 from django.conf import settings
 from django.core.mail import send_mail
+from django.db.models.aggregates import Avg
+from django.db.utils import IntegrityError
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, mixins, permissions, status, viewsets
 from rest_framework.decorators import api_view, permission_classes
 from rest_framework.exceptions import ValidationError
-from rest_framework.permissions import (
-    AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly
-)
+from rest_framework.permissions import (AllowAny, IsAuthenticated,
+                                        IsAuthenticatedOrReadOnly)
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
-from django.http import JsonResponse
+from reviews.models import Category, Genre, Review, Title, User
 
 from .filters import TitleFilter
-from .permissions import (
-    IsAdminOrReadOnly, IsAdmin, IsAdminAuthorModeratorOrReadOnly
-)
-from .serializers import (
-    GetOrCreateUserSerializer, CategorySerializer,
-    GenreSerializer, MeUserSerializer,
-    ReviewSerializer, TitleWriteSerializer,
-    TitleReadSerializer, ConfCodeSerializer,
-    CommentSerializer, UserSerializer
-)
-from reviews.models import Category, Genre, Review, Title, User
+from .permissions import (IsAdmin, IsAdminAuthorModeratorOrReadOnly,
+                          IsAdminOrReadOnly)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          ConfCodeSerializer, GenreSerializer,
+                          GetOrCreateUserSerializer, MeUserSerializer,
+                          ReviewSerializer, TitleReadSerializer,
+                          TitleWriteSerializer, UserSerializer)
 
 WRONG_USERNAME_EMAIL = 'Некорректные поля: {}'
 WRONG_CODE = 'Неправильный код!'
