@@ -1,4 +1,4 @@
-![yamdb](https://github.com/grachevvladislav/yamdb_final/actions/workflows/.github/workflows/yamdb_workflow.yml/badge.svg)
+https://github.com/grachevvladislav/yamdb_final/actions/workflows/.github/workflows/yamdb_workflow.yml/badge.svg
 # api_yamdb
 
 ### Описание проекта YaMDb:
