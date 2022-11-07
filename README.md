@@ -1,3 +1,4 @@
+![yamdb](https://github.com/grachevvladislav/yamdb_final/actions/workflows/.github/workflows/yamdb_workflow.yml/badge.svg)
 # api_yamdb
 
 ### Описание проекта YaMDb:
@@ -41,6 +42,3 @@ POSTGRES_PASSWORD=postgres # пароль для подключения к БД 
 DB_HOST=db # название сервиса (контейнера)
 DB_PORT=5432 # порт для подключения к БД
 ```
-
-
-![yamdb](https://github.com/grachevvladislav/yamdb_final/actions/workflows/.github/workflows/yamdb_workflow.yml/badge.svg)
