@@ -24,13 +24,9 @@ Cбор отзывов пользователей на произведения 
 
 Python 3.7  
 Django 2.2  
-DjangoREST 3.12
-
-### Клонировать репозиторий:
-
-```
-git clone https://github.com/grachevvladislav/infra_sp2.git
-```
+DjangoREST 3.12  
+Docker  
+Docker-compose
 
 ### Содержание файла ```.env```:
 
@@ -41,5 +37,18 @@ POSTGRES_PASSWORD=postgres # пароль для подключения к БД 
 DB_HOST=db # название сервиса (контейнера)
 DB_PORT=5432 # порт для подключения к БД
 ```
+
+### Запустить проект:
+Клонировать образ проекта: 
+```
+sudo docker image pull grachevvladislav/yamdb_final:latest
+```
+Из каталога ```infra/``` выполнить команду:
+```
+sudo docker-compose up -d
+```
+
+### Развернутые проект:
+http://vlad.360.ru/
 
 ![yamdb](https://github.com/grachevvladislav/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
