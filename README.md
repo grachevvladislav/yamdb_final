@@ -48,7 +48,7 @@ sudo docker image pull grachevvladislav/yamdb_final:latest
 sudo docker-compose up -d
 ```
 
-### Развернутые проект:
-http://vlad.360.ru/
+### Развернутый проект:
+-------
 
 ![yamdb](https://github.com/grachevvladislav/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
